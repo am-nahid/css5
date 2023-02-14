@@ -1,0 +1,192 @@
+body{
+    background-color: yellow;
+    
+}
+
+h1{
+    text-align: center;
+}
+
+.parent{
+    display: flex;
+    justify-content: center;
+}
+
+.cont1{
+    display: flex;
+} 
+
+
+.box{    
+    width: 100px;
+    height: 100px;
+    margin: 30px
+}
+
+.box1{
+    background-color: #4e189f;
+    transform: skewX(15deg);
+    animation-name: list1;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: backwards;
+}
+
+.box2{
+    background-color: rgb(138, 138, 214);
+    transform: skewY(0deg);
+    animation-name: list2;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.box3{
+    background-color: #4e189f;
+    transform: rotate(360deg);
+    animation: list3 3s infinite; 
+}
+
+.box4{
+    background-color: rgb(138, 138, 214);
+    animation: list41 3s infinite;
+    transform: scaleY(1);
+    
+
+}
+
+.box5{
+    background-color: brown;
+    animation: list42 3s infinite;
+    transform: scaleX(1);
+}
+
+.box6{
+    background-color: greenyellow;
+    transform: rotate(360deg);
+    animation: list43 3s infinite;
+}
+
+.boxa{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(101, 172, 30);
+    margin: 30px;
+}
+
+.link{
+    text-align: center;
+    font-size: 30px;
+}
+
+.box21{
+    transition: width 2s;
+}
+
+.box21:hover{
+    width: 250px;
+}
+
+.box22{
+    transition: width 2s, height 3s;
+}
+
+.box22:hover{
+    width: 250px;
+    height: 280px;
+}
+
+.box23{
+    transition: width 2s linear;
+}
+.box23:hover{
+    width: 250px;
+}
+
+.box24{
+    transition: width 2s ease;
+}
+.box24:hover{
+    width: 250px;
+}
+
+.box25{
+    transition: width 2s ease-in;
+}
+.box25:hover{
+    width: 250px;
+}
+
+.box26{
+    transition: width 2s ease-out;
+}
+.box26:hover{
+    width: 250px;
+}
+
+
+.box27{
+    transition: width 2s ease-in-out;
+}
+.box27:hover{
+    width: 250px;
+}
+
+
+
+@keyframes list1 {
+    0% {
+        transform:skewX(30deg)
+    }
+   
+    50%{
+        transform: skewX(-30deg);
+    }
+}
+
+@keyframes list2 {
+    0% {
+        transform: skewY(-15deg);
+    }
+    100% {
+        transform: skewY(30deg);
+    }
+}
+
+@keyframes list3 {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360);
+    }
+}
+
+@keyframes list41 {
+    0% {
+        transform: scaleY(0.5);
+        
+        /* height: 75px;
+        transform-origin: center; */
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+@keyframes list42 {
+    0%{
+        transform: scaleX(0.5);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes list43 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform:rotate(100%)
+    }
+}
